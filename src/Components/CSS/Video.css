@@ -1,0 +1,191 @@
+.PlayerCssmDiv {
+    display: flex;
+    background: #ccc;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.videoDiv {
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.videoDiv:hover .VideoControls {
+    transform: translateY(0%);
+}
+
+.PlayerCssvideoTag {
+    width: 100%;
+}
+
+.VideoControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    flex-wrap: wrap;
+    background: rgba(0, 0, 0, 0.7);
+    /* transform: translateY(100%); */
+    transition: all 0.5s;
+}
+
+.buttons button {
+    display: flex;
+    flex-direction: row;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.playBtn {
+    padding: 10%;
+}
+
+.playBtn svg {
+    color: white;
+}
+
+.orangeBar {
+    height: 10px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.orangeBarJuice {
+    height: 10px;
+    width: 0px;
+    background-color: orangered;
+}
+
+#pause {
+    display: none;
+}
+
+.videoDuration {
+    margin-top: 7px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+}
+
+.videoDuration p {
+    margin: 0px;
+}
+
+.psTenS,
+.muteDiv,
+.fullScreenDiv,
+.speed,
+.settingsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.plusTemS,
+.subTemS,
+.muteDiv,
+.fullScreenDiv,
+.speed,
+.settingsDiv {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.plusTemS,
+.subTemS,
+.muteDiv,
+.fullScreenDiv,
+.speed,
+.settingsDiv svg {
+    color: white;
+}
+
+.muteDiv {
+    margin-right: 0px;
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.volume {
+    visibility: hidden;
+    margin: 12px 8px 0px 2px;
+    width: 100px;
+    height: 10px;
+    background-color: white;
+    color: white;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+    transition-delay: 0.1s;
+}
+
+.volume:hover {
+    margin-top: 10px;
+    height: 15px;
+}
+
+.volumeIconsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#netVol {
+    float: right;
+    height: 100%;
+    background-color: orangered;
+    width: 24px;
+}
+
+#mute {
+    display: none;
+}
+
+#ExitFullScreen {
+    display: none;
+}
+
+.MoreSettings {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 13%;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.IconsColl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 260px;
+}
+
+.speedDiv {
+    display: none;
+    position: absolute;
+    bottom: 60px;
+    right: 18%;
+    background-color: white;
+    color: black;
+    width: 410px;
+    border-radius: 5px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1% 0%;
+    cursor: pointer;
+}
