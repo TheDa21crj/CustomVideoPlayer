@@ -96,16 +96,6 @@ export default function VideoH() {
     document.getElementById("video").requestFullscreen();
   };
 
-  var s = 1;
-  const Settings = async function (e) {
-    s++;
-    if (s % 2 === 0) {
-      document.getElementById("MoreSettingsA").style.display = "flex";
-    } else {
-      document.getElementById("MoreSettingsA").style.display = "none";
-    }
-  };
-
   var speed;
   const SpeedValue = async function (e) {
     speed = e.target.innerHTML;
@@ -179,11 +169,12 @@ export default function VideoH() {
               </div>
             </div>
             <div className="settingsDiv" onClick={setting}>
-              <SettingsSharpIcon fontSize="large" onClick={Settings} />
+              <SettingsSharpIcon fontSize="large" />
+              <div className="MoreSettings" id="MoreSettingsA">
+                hello world!
+              </div>
             </div>
-            <div className="MoreSettings" id="MoreSettingsA">
-              hello world!
-            </div>
+
             <div className="fullScreenDiv" onClick={fullScreenReq}>
               <div id="fullScreen">
                 <FullscreenSharpIcon fontSize="large" />

@@ -168,16 +168,6 @@
     display: none;
 }
 
-.MoreSettings {
-    display: none;
-    position: absolute;
-    bottom: 60px;
-    right: 13%;
-    background-color: white;
-    color: black;
-    border-radius: 5px;
-}
-
 .IconsColl {
     display: flex;
     flex-direction: row;
@@ -213,4 +203,20 @@
 
 .speedDiv p:hover {
     text-decoration: underline;
+}
+
+.settingsDiv:hover>.MoreSettings {
+    opacity: 1;
+    visibility: visible;
+}
+
+.MoreSettings {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 60px;
+    /* right: 13%; */
+    background-color: white;
+    color: black;
+    border-radius: 5px;
 }
