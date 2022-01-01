@@ -101,6 +101,14 @@ export default function VideoH() {
     speed = e.target.innerHTML;
     document.getElementById("video").playbackRate = speed;
   };
+
+  const proVideo = async function (e) {
+    var x = ((e.screenX - 231) / 800) * 100;
+    document.getElementById("orangeBarJuiceID").style.width = x + "%";
+    document.getElementById("video").currentTime =
+      document.getElementById("video").duration * (x / 100);
+  };
+
   return (
     <div className="PlayerCssmDiv">
       <div className="videoDiv">
@@ -116,7 +124,7 @@ export default function VideoH() {
           ></video>
         </div>
         <div className="VideoControls">
-          <div className="orangeBar">
+          <div className="orangeBar" id="o" onClick={proVideo}>
             <div className="orangeBarJuice" id="orangeBarJuiceID"></div>
           </div>
           <div className="buttons" id="playPauseDiv" onClick={PlayPause}>
@@ -140,7 +148,6 @@ export default function VideoH() {
               <Replay10Icon fontSize="large" onClick={subTemS} />
             </div>
           </div>
-
           <div className="IconsColl">
             <div className="speed">
               <SpeedIcon fontSize="large" />
