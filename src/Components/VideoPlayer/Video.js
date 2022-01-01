@@ -69,12 +69,12 @@ export default function VideoH() {
       document.getElementById("video").muted = true;
       document.getElementById("mute").style.display = "flex";
       document.getElementById("notMute").style.display = "none";
-      document.getElementById("volumeID").style.visibility = "hidden";
+      // document.getElementById("volumeID").style.display = "hidden";
     } else {
       document.getElementById("video").muted = false;
       document.getElementById("mute").style.display = "none";
       document.getElementById("notMute").style.display = "flex";
-      document.getElementById("volumeID").style.visibility = "visible";
+      // document.getElementById("volumeID").style.display = "visible";
     }
   };
 
@@ -86,16 +86,6 @@ export default function VideoH() {
 
   const fullScreenReq = async function (e) {
     document.getElementById("video").requestFullscreen();
-  };
-
-  var q = 1;
-  const Speed = async function (e) {
-    q++;
-    if (q % 2 === 0) {
-      document.getElementById("speedDivID").style.display = "flex";
-    } else {
-      document.getElementById("speedDivID").style.display = "none";
-    }
   };
 
   var s = 1;
@@ -152,19 +142,21 @@ export default function VideoH() {
               <Replay10Icon fontSize="large" onClick={subTemS} />
             </div>
           </div>
-          <div className="speed" onClick={Speed}>
-            <SpeedIcon fontSize="large" />
-          </div>
-          <div className="speedDiv" id="speedDivID">
-            <p onClick={SpeedValue}> 0.25 </p>
-            <p onClick={SpeedValue}> 0.50 </p>
-            <p onClick={SpeedValue}> 0.75 </p>
-            <p onClick={SpeedValue}> 1.00 </p>
-            <p onClick={SpeedValue}> 1.25 </p>
-            <p onClick={SpeedValue}> 1.50 </p>
-            <p onClick={SpeedValue}> 1.75 </p> <p onClick={SpeedValue}> 2 </p>
-          </div>
+
           <div className="IconsColl">
+            <div className="speed">
+              <SpeedIcon fontSize="large" />
+              <div className="speedDiv" id="speedDivID">
+                <p onClick={SpeedValue}> 0.25 </p>
+                <p onClick={SpeedValue}> 0.50 </p>
+                <p onClick={SpeedValue}> 0.75 </p>
+                <p onClick={SpeedValue}> 1.00 </p>
+                <p onClick={SpeedValue}> 1.25 </p>
+                <p onClick={SpeedValue}> 1.50 </p>
+                <p onClick={SpeedValue}> 1.75 </p>{" "}
+                <p onClick={SpeedValue}> 2 </p>
+              </div>
+            </div>
             <div className="muteDiv">
               <div className="volume" id="volumeID" onScroll={volumeScroll}>
                 <div id="netVol"> </div>
