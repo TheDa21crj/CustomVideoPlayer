@@ -67,12 +67,14 @@
 
 .orangeBar {
     height: 5px;
+    margin-bottom: 3px;
     transition: all;
     transition-duration: 0.5s;
 }
 
 .orangeBar:hover {
     height: 8px;
+    margin-bottom: 2px;
 }
 
 #pause {
