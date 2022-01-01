@@ -77,8 +77,13 @@ export default function VideoH() {
   };
 
   const VolVal = async function (e) {
-    document.getElementById("video").volume =
-      document.getElementById("netVol").value / 100;
+    if (document.getElementById("netVol").value == 0) {
+      document.getElementById("notMute").style.display = "none";
+      document.getElementById("mute").style.display = "flex";
+    } else {
+      document.getElementById("video").volume =
+        document.getElementById("netVol").value / 100;
+    }
   };
 
   const volumeScroll = async function (e) {
