@@ -69,13 +69,16 @@ export default function VideoH() {
       document.getElementById("video").muted = true;
       document.getElementById("mute").style.display = "flex";
       document.getElementById("notMute").style.display = "none";
-      // document.getElementById("volumeID").style.display = "hidden";
     } else {
       document.getElementById("video").muted = false;
       document.getElementById("mute").style.display = "none";
       document.getElementById("notMute").style.display = "flex";
-      // document.getElementById("volumeID").style.display = "visible";
     }
+  };
+
+  const VolVal = async function (e) {
+    document.getElementById("video").volume =
+      document.getElementById("netVol").value / 100;
   };
 
   const volumeScroll = async function (e) {
@@ -153,20 +156,20 @@ export default function VideoH() {
                 <p onClick={SpeedValue}> 1.00 </p>
                 <p onClick={SpeedValue}> 1.25 </p>
                 <p onClick={SpeedValue}> 1.50 </p>
-                <p onClick={SpeedValue}> 1.75 </p>{" "}
+                <p onClick={SpeedValue}> 1.75 </p>
                 <p onClick={SpeedValue}> 2 </p>
               </div>
             </div>
             <div className="muteDiv">
-              <div className="volume" id="volumeID" onScroll={volumeScroll}>
-                <div id="netVol"> </div>
-              </div>
-              <div className="volumeIconsDiv" onClick={MuteBtn}>
+              <div className="volumeIconsDiv">
                 <div id="notMute">
-                  <VolumeUpSharpIcon fontSize="large" />
+                  <VolumeUpSharpIcon fontSize="large" onClick={MuteBtn} />
+                  <div className="volume" id="volumeID" onScroll={volumeScroll}>
+                    <input type="range" name="" id="netVol" onChange={VolVal} />
+                  </div>
                 </div>
                 <div id="mute">
-                  <VolumeOffSharpIcon fontSize="large" />
+                  <VolumeOffSharpIcon fontSize="large" onClick={MuteBtn} />
                 </div>
               </div>
             </div>
