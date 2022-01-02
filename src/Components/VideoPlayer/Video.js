@@ -119,6 +119,14 @@ export default function VideoH() {
         plusTemS();
       } else if (e.which == 74) {
         subTemS();
+      } else if (e.which == 39) {
+        if (document.getElementById("video").playbackRate < 2)
+          document.getElementById("video").playbackRate += 0.25;
+      } else if (e.which == 37) {
+        if (document.getElementById("video").playbackRate > 0.25)
+          document.getElementById("video").playbackRate -= 0.25;
+      } else if (e.which == 187) {
+        document.getElementById("video").playbackRate = 1;
       }
     };
   };
