@@ -127,6 +127,8 @@ export default function VideoH() {
           document.getElementById("video").playbackRate -= 0.25;
       } else if (e.which == 187) {
         document.getElementById("video").playbackRate = 1;
+      } else if (e.which == 70) {
+        fullScreenReq();
       }
     };
   };
