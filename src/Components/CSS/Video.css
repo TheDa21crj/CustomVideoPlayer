@@ -154,6 +154,7 @@
     transform: rotate(270deg);
     margin-left: -53px;
     margin-top: 65px;
+    cursor: pointer;
 }
 
 .volumeIconsDiv {

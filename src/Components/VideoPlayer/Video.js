@@ -109,8 +109,16 @@ export default function VideoH() {
       document.getElementById("video").duration * (x / 100);
   };
 
+  const keySortCut = async function (e) {
+    document.onkeyup = function (e) {
+      if (e.which == 77) {
+        MuteBtn();
+      }
+    };
+  };
+
   return (
-    <div className="PlayerCssmDiv">
+    <div className="PlayerCssmDiv" onClick={keySortCut}>
       <div className="videoDiv">
         <div onClick={PlayPause}>
           <video
