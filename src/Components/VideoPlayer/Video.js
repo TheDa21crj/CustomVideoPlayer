@@ -113,6 +113,12 @@ export default function VideoH() {
     document.onkeyup = function (e) {
       if (e.which == 77) {
         MuteBtn();
+      } else if (e.which == 32) {
+        PlayPause();
+      } else if (e.which == 76) {
+        plusTemS();
+      } else if (e.which == 74) {
+        subTemS();
       }
     };
   };
