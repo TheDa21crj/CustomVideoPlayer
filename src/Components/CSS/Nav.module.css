@@ -16,12 +16,14 @@
 .iconDiv {
     margin-left: -100px;
     animation: playBtn 1s ease;
+    animation-delay: 0.3s;
 }
 
 .mDivN p {
     margin: 0px 0px 0px 5px;
     font-weight: bold;
     animation: playBtnP 1s ease;
+    animation-delay: 0.3s;
 }
 
 @keyframes playBtnP {
