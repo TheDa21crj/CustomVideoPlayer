@@ -13,19 +13,20 @@
     justify-content: center;
 }
 
-
-/* .iconDiv svg {
-    animation: playBtn 5s ease;
+.iconDiv {
+    animation: playBtn 1s ease;
 }
 
 @keyframes playBtn {
     from {
-        transform: rotateZ("0deg");
+        /* transform: rotateX("0deg"); */
+        margin-left: 0px;
     }
     to {
-        transform: rotateZ("360deg");
+        /* transform: rotateX("360deg"); */
+        margin-left: -100px;
     }
-} */
+}
 
 .mDivN p {
     opacity: 0;
