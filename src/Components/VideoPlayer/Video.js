@@ -144,7 +144,7 @@ export default function VideoH() {
 
   return (
     <div className="PlayerCssmDiv" onClick={keySortCut}>
-      <div className="videoDiv">
+      <div className="videoDiv" id="doc">
         <div onClick={PlayPause}>
           <video
             src={Video}
