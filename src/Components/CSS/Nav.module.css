@@ -17,6 +17,7 @@
     margin-left: -100px;
     animation: playBtn 1s ease;
     animation-delay: 0.3s;
+    cursor: pointer;
 }
 
 .mDivN p {
@@ -24,7 +25,6 @@
     font-weight: bold;
     animation: playBtnP 1s ease;
     animation-delay: 0.3s;
-    cursor: pointer;
 }
 
 @keyframes playBtnP {
