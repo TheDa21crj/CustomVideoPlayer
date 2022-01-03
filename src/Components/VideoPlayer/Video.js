@@ -107,7 +107,6 @@ export default function VideoH() {
   var speed;
   const SpeedValue = async function (e) {
     speed = e.target.innerHTML;
-    e.target.id = "speedCur";
     document.getElementById("video").playbackRate = speed;
   };
 
@@ -184,7 +183,7 @@ export default function VideoH() {
           <div className="IconsColl">
             <div className="speed">
               <SpeedIcon fontSize="large" />
-              <div className="speedDiv" id="speedDivID">
+              <div className="speedDiv" id="speedDivID" onClick={speedCurFun}>
                 <p onClick={SpeedValue}> 0.25 </p>
                 <p onClick={SpeedValue}> 0.50 </p>
                 <p onClick={SpeedValue}> 0.75 </p>
