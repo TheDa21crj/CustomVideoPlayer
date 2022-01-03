@@ -110,6 +110,29 @@ export default function VideoH() {
     document.getElementById("video").playbackRate = speed;
   };
 
+  const speedCurFun = async function (e) {
+    let htmlElements = document.getElementsByTagName("p");
+    for (let i = 0; i < htmlElements.length; i++) {
+      if (
+        htmlElements[i].innerHTML ==
+        document.getElementById("video").playbackRate
+      ) {
+        htmlElements[i].id = "speedCur";
+      } else if (
+        htmlElements[i].innerHTML == 0.25 ||
+        htmlElements[i].innerHTML == 0.5 ||
+        htmlElements[i].innerHTML == 0.75 ||
+        htmlElements[i].innerHTML == 1.0 ||
+        htmlElements[i].innerHTML == 1.25 ||
+        htmlElements[i].innerHTML == 1.5 ||
+        htmlElements[i].innerHTML == 1.75 ||
+        htmlElements[i].innerHTML == 2
+      ) {
+        htmlElements[i].id = "";
+      }
+    }
+  };
+
   const proVideo = async function (e) {
     var x = ((e.screenX - 231) / 800) * 100;
     document.getElementById("orangeBarJuiceID").style.width = x + "%";
@@ -130,11 +153,14 @@ export default function VideoH() {
       } else if (e.which == 39) {
         if (document.getElementById("video").playbackRate < 2)
           document.getElementById("video").playbackRate += 0.25;
+        speedCurFun();
       } else if (e.which == 37) {
         if (document.getElementById("video").playbackRate > 0.25)
           document.getElementById("video").playbackRate -= 0.25;
+        speedCurFun();
       } else if (e.which == 187) {
         document.getElementById("video").playbackRate = 1;
+        speedCurFun();
       } else if (e.which == 70) {
         fullScreenReq();
       }
