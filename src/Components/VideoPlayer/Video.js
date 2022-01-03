@@ -93,7 +93,6 @@ export default function VideoH() {
   const setting = async function (e) {};
 
   const fullScreenReq = async function (e) {
-    // document.getElementById("video").requestFullscreen();
     if (document.getElementById("doc").requestFullscreen) {
       document.getElementById("doc").requestFullscreen();
     } else if (document.getElementById("doc").msRequestFullscreen) {
