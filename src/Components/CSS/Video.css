@@ -178,14 +178,26 @@
     width: 260px;
 }
 
+#speedCur {
+    background-color: gold;
+    border-radius: 5px;
+    padding: 1%;
+    transition: all 0.3s;
+}
+
+#speedCur:hover {
+    color: white;
+    text-decoration: none;
+}
+
 .speed:hover>.speedDiv {
     opacity: 1;
     visibility: visible;
 }
 
 .speedDiv {
-    opacity: 0;
-    visibility: hidden;
+    /* opacity: 0;
+    visibility: hidden; */
     display: flex;
     position: absolute;
     bottom: 40px;
@@ -202,10 +214,12 @@
 
 .speedDiv p {
     margin: 10px 0px;
+    transition: all 0.3s;
 }
 
 .speedDiv p:hover {
-    text-decoration: underline;
+    /* text-decoration: underline; */
+    color: gold;
 }
 
 .settingsDiv:hover>.MoreSettings {

@@ -188,7 +188,9 @@ export default function VideoH() {
                 <p onClick={SpeedValue}> 0.25 </p>
                 <p onClick={SpeedValue}> 0.50 </p>
                 <p onClick={SpeedValue}> 0.75 </p>
-                <p onClick={SpeedValue}> 1.00 </p>
+                <p onClick={SpeedValue} id="speedCur">
+                  1.00
+                </p>
                 <p onClick={SpeedValue}> 1.25 </p>
                 <p onClick={SpeedValue}> 1.50 </p>
                 <p onClick={SpeedValue}> 1.75 </p>
