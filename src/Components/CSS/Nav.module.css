@@ -13,14 +13,19 @@
     justify-content: center;
 }
 
-.iconDiv svg {
-    animation: playBtn 1s ease;
+
+/* .iconDiv svg {
+    animation: playBtn 5s ease;
 }
 
 @keyframes playBtn {
-    from {}
-    to {}
-}
+    from {
+        transform: rotateZ("0deg");
+    }
+    to {
+        transform: rotateZ("360deg");
+    }
+} */
 
 .mDivN p {
     opacity: 0;
