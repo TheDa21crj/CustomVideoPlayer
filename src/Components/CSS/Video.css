@@ -215,6 +215,11 @@
 .speedDiv p {
     margin: 10px 0px;
     transition: all 0.3s;
+    cursor: pointer;
+}
+
+.speedDiv p::selection {
+    background: none;
 }
 
 .speedDiv p:hover {
