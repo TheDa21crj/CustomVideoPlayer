@@ -218,8 +218,20 @@
     visibility: hidden;
     position: absolute;
     bottom: 60px;
-    /* right: 13%; */
     background-color: white;
     color: black;
     border-radius: 5px;
 }
+
+
+/* video::-webkit-media-controls {
+    display: none !important;
+}
+
+video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+
+.VideoControls {
+    z-index: 2147483647;
+} */
