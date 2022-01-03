@@ -93,7 +93,16 @@ export default function VideoH() {
   const setting = async function (e) {};
 
   const fullScreenReq = async function (e) {
-    document.getElementById("video").requestFullscreen();
+    // document.getElementById("video").requestFullscreen();
+    if (document.getElementById("doc").requestFullscreen) {
+      document.getElementById("doc").requestFullscreen();
+    } else if (document.getElementById("doc").msRequestFullscreen) {
+      document.getElementById("doc").msRequestFullscreen();
+    } else if (document.getElementById("doc").mozRequestFullScreen) {
+      document.getElementById("doc").mozRequestFullScreen();
+    } else if (document.getElementById("doc").webkitRequestFullscreen) {
+      document.getElementById("doc").webkitRequestFullscreen();
+    }
   };
 
   var speed;
