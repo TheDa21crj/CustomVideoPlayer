@@ -3,4 +3,19 @@
     text-align: center;
     color: white;
     padding: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+.mDivN .iconDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mDivN p {
+    opacity: 0;
+    visibility: hidden;
+    margin: 0px 0px 0px 5px;
+    font-weight: bold;
 }
