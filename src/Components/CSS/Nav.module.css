@@ -13,6 +13,15 @@
     justify-content: center;
 }
 
+.iconDiv svg {
+    animation: playBtn 1s ease;
+}
+
+@keyframes playBtn {
+    from {}
+    to {}
+}
+
 .mDivN p {
     opacity: 0;
     visibility: hidden;
