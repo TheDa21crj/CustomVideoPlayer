@@ -13,8 +13,10 @@
     justify-content: center;
 }
 
-
-/* .LinkH {} */
+.LinkH {
+    color: white;
+    text-decoration: none;
+}
 
 .iconDiv {
     margin-left: -100px;
