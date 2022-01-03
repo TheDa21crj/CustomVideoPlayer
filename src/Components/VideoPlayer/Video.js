@@ -65,7 +65,7 @@ export default function VideoH() {
   };
 
   const MuteBtn = async function (e) {
-    if (document.getElementById("video").muted === false) {
+    if (document.getElementById("video").muted == false) {
       document.getElementById("video").muted = true;
       document.getElementById("mute").style.display = "flex";
       document.getElementById("notMute").style.display = "none";
@@ -93,6 +93,7 @@ export default function VideoH() {
   const setting = async function (e) {};
 
   const fullScreenReq = async function (e) {
+    // document.getElementById("video").requestFullscreen();
     if (document.getElementById("doc").requestFullscreen) {
       document.getElementById("doc").requestFullscreen();
     } else if (document.getElementById("doc").msRequestFullscreen) {
@@ -121,21 +122,21 @@ export default function VideoH() {
     document.onkeyup = function (e) {
       if (e.which == 77) {
         MuteBtn();
-      } else if (e.which === 32) {
+      } else if (e.which == 32) {
         PlayPause();
-      } else if (e.which === 76) {
+      } else if (e.which == 76) {
         plusTemS();
-      } else if (e.which === 74) {
+      } else if (e.which == 74) {
         subTemS();
-      } else if (e.which === 39) {
+      } else if (e.which == 39) {
         if (document.getElementById("video").playbackRate < 2)
           document.getElementById("video").playbackRate += 0.25;
-      } else if (e.which === 37) {
+      } else if (e.which == 37) {
         if (document.getElementById("video").playbackRate > 0.25)
           document.getElementById("video").playbackRate -= 0.25;
-      } else if (e.which === 187) {
+      } else if (e.which == 187) {
         document.getElementById("video").playbackRate = 1;
-      } else if (e.which === 70) {
+      } else if (e.which == 70) {
         fullScreenReq();
       }
     };
