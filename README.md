@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+This is a custom video player made from scratch using Reactjs - building user interfaces, matrialUI - for the icons. The main features of The video player are:-
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Play the video in Fullscreen mode with custom video controls (not the default brower video player).
+2. Play and Pause the video by clicking on the play/pause icon or on the video.
+3. Hover on the video to see the Video Controls.
+4. Skip +10s and -10s.
+5. Mute and unmute volume.
+6. Conroling the volume of the Video.
+7. Increase or decrease the PlayBack rate of the Video.
+8. Skip to any part of the video by using the progressing bar.
+9. The total duration of the video is also Visible.
+10. The currentTime of the video is also visible.
 
-## Available Scripts
+There are also many shortcuts key made for controlling the different features of the video like:-
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. "Space Bar" for play/pause the video.
+2. "m" to mute the video.
+3. "L" to skip +10s.
+4. "J" to skip -10s.
+5. "Arrow Right" to increase the playback Rate of the video by +0.25 (upto 2).
+6. "Arrow Left" to decrease the playback Rate of the video by -0.25 (till 0.25).
+7. "Equal Sign" ("=") to set the playback Rate of the video to 1.00.
+8. "F" to enter the fullscreen mode.
+9. "esc" to exit from the fullscreen mode.
