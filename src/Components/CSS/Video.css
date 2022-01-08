@@ -240,3 +240,22 @@
     color: black;
     border-radius: 5px;
 }
+
+.topDivRes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+}
+
+@media only screen and (max-width: 500px) {
+    .VideoControls {
+        flex-direction: column;
+    }
+    .topDivRes {
+        width: 100%;
+    }
+    .IconsColl {
+        width: 100%;
+    }
+}

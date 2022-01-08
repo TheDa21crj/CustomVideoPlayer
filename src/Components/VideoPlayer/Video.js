@@ -86,12 +86,6 @@ export default function VideoH() {
     }
   };
 
-  const volumeScroll = async function (e) {
-    console.log("Scrolled");
-  };
-
-  const setting = async function (e) {};
-
   const fullScreenReq = async function (e) {
     if (document.getElementById("doc").requestFullscreen) {
       document.getElementById("doc").requestFullscreen();
@@ -131,13 +125,6 @@ export default function VideoH() {
         htmlElements[i].id = "";
       }
     }
-  };
-
-  const proVideo = async function (e) {
-    var x = ((e.screenX - 231) / 800) * 100;
-    document.getElementById("orangeBarJuiceID").style.width = x + "%";
-    document.getElementById("video").currentTime =
-      document.getElementById("video").duration * (x / 100);
   };
 
   const keySortCut = async function (e) {
@@ -184,28 +171,30 @@ export default function VideoH() {
           ></video>
         </div>
         <div className="VideoControls">
-          <div className="orangeBar" id="o" onClick={proVideo}>
+          <div className="orangeBar" id="o">
             <div className="orangeBarJuice" id="orangeBarJuiceID"></div>
           </div>
-          <div className="buttons" id="playPauseDiv" onClick={PlayPause}>
-            <button className="playBtn" id="play">
-              <PlayCircleOutlineRoundedIcon fontSize="large" />
-            </button>
-            <button className="playBtn" id="pause">
-              <PauseCircleOutlineIcon fontSize="large" />
-            </button>
-          </div>
-          <div className="videoDuration">
-            <p id="currentTime">0</p>
-            <p id="diff">/</p>
-            <p id="totalTime">00</p>
-          </div>
-          <div className="psTenS">
-            <div className="plusTemS">
-              <Forward10Icon fontSize="large" onClick={plusTemS} />
+          <div className="topDivRes">
+            <div className="buttons" id="playPauseDiv" onClick={PlayPause}>
+              <button className="playBtn" id="play">
+                <PlayCircleOutlineRoundedIcon fontSize="large" />
+              </button>
+              <button className="playBtn" id="pause">
+                <PauseCircleOutlineIcon fontSize="large" />
+              </button>
             </div>
-            <div className="subTemS">
-              <Replay10Icon fontSize="large" onClick={subTemS} />
+            <div className="videoDuration">
+              <p id="currentTime">0</p>
+              <p id="diff">/</p>
+              <p id="totalTime">00</p>
+            </div>
+            <div className="psTenS">
+              <div className="plusTemS">
+                <Forward10Icon fontSize="large" onClick={plusTemS} />
+              </div>
+              <div className="subTemS">
+                <Replay10Icon fontSize="large" onClick={subTemS} />
+              </div>
             </div>
           </div>
           <div className="IconsColl">
@@ -226,7 +215,7 @@ export default function VideoH() {
               <div className="volumeIconsDiv">
                 <div id="notMute">
                   <VolumeUpSharpIcon fontSize="large" onClick={MuteBtn} />
-                  <div className="volume" id="volumeID" onScroll={volumeScroll}>
+                  <div className="volume" id="volumeID">
                     <input type="range" name="" id="netVol" onChange={VolVal} />
                   </div>
                 </div>
@@ -235,13 +224,6 @@ export default function VideoH() {
                 </div>
               </div>
             </div>
-            <div className="settingsDiv" onClick={setting}>
-              <SettingsSharpIcon fontSize="large" />
-              <div className="MoreSettings" id="MoreSettingsA">
-                hello world!
-              </div>
-            </div>
-
             <div className="fullScreenDiv" onClick={fullScreenReq}>
               <div id="fullScreen">
                 <FullscreenSharpIcon fontSize="large" />
